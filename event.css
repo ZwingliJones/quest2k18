@@ -1,0 +1,135 @@
+
+.imgsrc img{
+	-webkit-animation: rotation 10s infinite linear;
+	position: absolute;
+	z-index: 1;
+	height:500px ;margin-left:30%;
+	margin-top: 20px;
+}
+	
+.imgsrc1{
+	/*-webkit-animation: rotation 10s infinite linear;*/
+	position: relative;
+}
+.imgsrc1 img{
+	position: absolute;
+	height: 500px;
+	margin-left:30%;
+	margin-top: 20px;
+
+}
+body{
+	background:url(images/bg/underwater2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+}
+.arts img:hover{
+	border: 10px solid green;
+	cursor: pointer;
+}
+
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+@import url(//fonts.googleapis.com/css?family=Indie+Flower);
+
+$base: #A5E2F3;
+
+ clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+ 
+.menu {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  margin: 30px auto;
+  width: 70%;
+  height: 0;
+  padding-top: 70%;
+}
+@media all and (max-width: 320px) {
+  .menu {
+    width: 230px;
+    height: 230px;
+    padding: 0;
+  }
+}
+@media all and (min-width: 700px) {
+  .menu {
+    width: 500px;
+    height: 500px;
+    padding: 0;
+  }
+}
+.menu li { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  clip-path: url(#sector);
+  /* try this one in Chrome/Opera/Safari */
+  /* clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%); */
+  
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &:hover {
+    background-color: gold;
+  }
+}
+.one {
+  background-color: $base;
+  transform: rotate(0deg);
+}
+.two {
+  background-color: darken($base, 7%);
+  transform: rotate(-60deg);
+}
+.three {
+  background-color: darken($base, 14%);
+  transform: rotate(-120deg);
+}
+.four {
+  background-color: darken($base, 21%);
+  transform: rotate(-180deg);
+}
+.five {
+  background-color: darken($base, 28%);
+  transform: rotate(-240deg);
+}
+.six {
+  background-color: darken($base, 35%);
+  transform: rotate(-300deg);
+}
+
+.icon {
+  position: absolute;
+  /* exact values here depend on what you are placing inside the items (icon, image, text, etc.) */
+  right: 15%;
+  top: 30%;
+  /* make sure it it rotated enough; angle of rotation = angle of the sector itself */
+  transform: rotate(60deg);
+  
+  /* style further as needed */
+  color: darken($base, 60%);
+  font-family: Indie Flower;
+  font-size: 25px;
+}
+
+p {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
